@@ -1,0 +1,52 @@
+<html>
+
+	<head>
+	
+		<title>
+			Canvas HTML Module
+		</title>
+
+		<style>
+		body {
+			background: transparent;
+			height: 185px; 
+			margin: 0;
+			overflow: hidden;
+			padding:0;
+			width: 185px;  
+			}
+		</style>
+		
+	</head>
+	
+	<body>
+
+		<a href="#" onclick="sendTo(); return false;" style="background-image: url('about:blank');border:none;position:fixed; width:100%;height:100%;"></a>
+		
+		<div id="fb-root"></div>
+		
+		<script type="text/javascript" charset="utf-8">
+			window.fbAsyncInit = function() {
+			    FB.init({
+			      appId  : '254613761360231'
+			    });
+			  };
+			
+			function sendTo(){
+			  FB.ui({
+			    method: 'send',
+			    link: "https://www.facebook.com/coxcommunications/app_254613761360231",
+			    to: '100002827994007'
+			  })
+			}
+			(function() {
+			    var e = document.createElement('script');
+			    e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
+			    e.async = true;
+			    document.getElementById('fb-root').appendChild(e);
+			  }());
+		</script>
+	
+	</body>
+	
+</html>
